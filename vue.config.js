@@ -10,7 +10,12 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
-const { VUE_APP_TITLE, VUE_APP_BASE_URL } = process.env;
+const {
+  VUE_APP_TITLE,
+  VUE_APP_BASE_URL,
+  VUE_APP_BASE_API,
+  VUE_APP_SERVICE_BASE_URL
+} = process.env;
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -29,6 +34,17 @@ module.exports = defineConfig({
       alias: {
         '@': resolve('src'),
         '~': resolve('/')
+      }
+    },
+    devServer: {
+      host: '0.0.0.0',
+      port: 9528,
+      open: true,
+      proxy: {
+        [VUE_APP_BASE_API]: {
+          target: VUE_APP_SERVICE_BASE_URL,
+          changeOrigin: true
+        }
       }
     }
   }
