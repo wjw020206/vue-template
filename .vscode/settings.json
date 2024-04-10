@@ -11,6 +11,7 @@
   "git-graph.repository.fetchAndPrune": true,
   "git-graph.dialog.fetchRemote.prune": true,
   "path-intellisense.mappings": {
-    "@": "${workspaceRoot}/src"
+    "@": "${workspaceRoot}/src",
+    "~": "${workspaceRoot}"
   }
 }
