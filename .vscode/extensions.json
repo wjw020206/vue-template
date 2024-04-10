@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "formulahendry.auto-complete-tag",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "pranaygp.vscode-css-peek",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "redjue.git-commit-plugin",
+    "eamodio.gitlens",
+    "christian-kohler.path-intellisense",
+    "kisstkondoros.vscode-gutter-preview",
+    "esbenp.prettier-vscode",
+    "vue.volar",
+    "sdras.vue-vscode-snippets",
+    "antfu.iconify"
+  ]
+}
