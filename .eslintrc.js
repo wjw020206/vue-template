@@ -5,7 +5,11 @@ module.exports = {
     node: true,
     es2021: true
   },
-  extends: ['plugin:vue/essential', 'eslint:recommended'],
+  extends: [
+    'plugin:vue/essential',
+    'eslint:recommended',
+    './.eslintrc-auto-import.json'
+  ],
   parserOptions: {
     parser: '@babel/eslint-parser'
   },

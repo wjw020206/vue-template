@@ -1,21 +1,19 @@
 {
   "name": "vue-admin-template",
-  "private": true,
   "version": "0.1.0",
-  "engines": {
-    "node": ">=18.0.0"
-  },
+  "private": true,
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "simple-git-hooks",
-    "dev": "vue-cli-service serve --mode development",
-    "dev:prod": "vue-cli-service serve --mode production",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write ."
+    "dev": "vue-cli-service serve --mode development",
+    "dev:prod": "vue-cli-service serve --mode production",
+    "format": "prettier --write .",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
   },
   "dependencies": {
     "core-js": "^3.36.1",
+    "pinia": "^2.1.7",
     "vue": "2.7.16",
     "vue-router": "3.6.5"
   },
@@ -28,15 +26,17 @@
     "@vue/cli-service": "5.0.8",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.24.1",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "sass": "^1.74.1",
     "sass-loader": "^14.1.1",
-    "simple-git-hooks": "^2.11.1",
+    "unplugin-auto-import": "^0.17.5",
+    "vue-cli-plugin-pinia": "~0.2.4",
     "vue-template-compiler": "^2.7.16"
   },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+  "engines": {
+    "node": ">=18.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [

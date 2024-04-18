@@ -1,5 +1,13 @@
 {
-  "cSpell.words": ["autofetch", "esbenp", "Parens", "preinstall"],
+  "cSpell.words": [
+    "autofetch",
+    "esbenp",
+    "Parens",
+    "pinia",
+    "preinstall",
+    "unplugin",
+    "unplugins"
+  ],
   "cSpell.ignorePaths": ["pnpm-lock.yaml", ".vscode/*"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -12,6 +20,6 @@
   "git-graph.dialog.fetchRemote.prune": true,
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src",
-    "~": "${workspaceRoot}"
+    "~": "${workspaceRoot}/*"
   }
 }

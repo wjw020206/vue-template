@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
+const setupPlugins = require('./build/plugins');
 const path = require('path');
 
 /**
@@ -10,17 +11,13 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
-const {
-  VUE_APP_TITLE,
-  VUE_APP_BASE_URL,
-  VUE_APP_BASE_API,
-  VUE_APP_SERVICE_BASE_URL
-} = process.env;
+const { VUE_APP_TITLE, VUE_APP_BASE_API, VUE_APP_API_URL, BASE_URL } =
+  process.env;
 
 module.exports = defineConfig({
   transpileDependencies: true,
 
-  publicPath: VUE_APP_BASE_URL,
+  publicPath: BASE_URL,
 
   // 配置 public/index.html 的标题
   chainWebpack: config => {
@@ -30,6 +27,7 @@ module.exports = defineConfig({
     });
   },
   configureWebpack: {
+    plugins: setupPlugins(),
     resolve: {
       alias: {
         '@': resolve('src'),
@@ -42,7 +40,7 @@ module.exports = defineConfig({
       open: true,
       proxy: {
         [VUE_APP_BASE_API]: {
-          target: VUE_APP_SERVICE_BASE_URL,
+          target: VUE_APP_API_URL,
           changeOrigin: true
         }
       }
