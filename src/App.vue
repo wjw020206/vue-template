@@ -5,6 +5,7 @@
       <button @click="counterStore.increment">Add</button>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <i-ep-avatar />
     </nav>
     <router-view />
     <hello-world />

@@ -8,7 +8,14 @@ module.exports = function unplugin() {
       dts: 'src/typings/auto-imports.d.ts'
     }),
     require('unplugin-vue-components/webpack').default({
-      dts: 'src/typings/components.d.ts'
+      dts: 'src/typings/components.d.ts',
+      resolvers: [require('unplugin-icons/resolver')()]
+    }),
+    require('unplugin-icons/webpack')({
+      compiler: 'vue2',
+      scale: 1,
+      defaultClass: 'inline-block',
+      autoInstall: true
     })
   ];
 };
