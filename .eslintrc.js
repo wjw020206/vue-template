@@ -8,7 +8,8 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     'eslint:recommended',
-    './.eslintrc-auto-import.json'
+    './.eslintrc-auto-import.json',
+    '@unocss'
   ],
   parserOptions: {
     parser: '@babel/eslint-parser'

@@ -9,6 +9,12 @@ module.exports = function unplugin() {
     }),
     require('unplugin-vue-components/webpack').default({
       dts: 'src/typings/components.d.ts',
+      types: [
+        {
+          from: 'vue-router',
+          names: ['RouterLink', 'RouterView']
+        }
+      ],
       resolvers: [require('unplugin-icons/resolver')()]
     }),
     require('unplugin-icons/webpack')({
