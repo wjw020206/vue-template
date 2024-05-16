@@ -17,9 +17,9 @@
     "sdras.vue-vscode-snippets",
     "antfu.iconify",
     "antfu.goto-alias",
-    "vue.vscode-typescript-vue-plugin",
     "antfu.unocss",
     "meganrogge.template-string-converter",
-    "ipatalas.vscode-postfix-ts"
+    "ipatalas.vscode-postfix-ts",
+    "vue.volar"
   ]
 }
