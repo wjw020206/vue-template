@@ -31,6 +31,9 @@ devDependencies:
   '@unocss/eslint-config':
     specifier: ^0.58.9
     version: 0.58.9(eslint@8.57.0)(typescript@5.4.5)
+  '@unocss/postcss':
+    specifier: ^0.60.2
+    version: 0.60.2(postcss@8.4.38)
   '@unocss/webpack':
     specifier: ^0.59.4
     version: 0.59.4(webpack@5.91.0)
@@ -62,11 +65,11 @@ devDependencies:
     specifier: ^3.2.5
     version: 3.2.5
   sass:
-    specifier: ^1.74.1
-    version: 1.74.1
+    specifier: 1.32.13
+    version: 1.32.13
   sass-loader:
     specifier: ^14.1.1
-    version: 14.1.1(sass@1.74.1)(webpack@5.91.0)
+    version: 14.1.1(sass@1.32.13)(webpack@5.91.0)
   unocss:
     specifier: ^0.59.4
     version: 0.59.4(@unocss/webpack@0.59.4)(postcss@8.4.38)(vite@5.2.9)
@@ -2213,7 +2216,7 @@ packages:
       '@unocss/core': 0.59.4
       '@unocss/reset': 0.59.4
       '@unocss/vite': 0.59.4(vite@5.2.9)
-      vite: 5.2.9(sass@1.74.1)
+      vite: 5.2.9(sass@1.32.13)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2256,12 +2259,24 @@ packages:
       unconfig: 0.3.13
     dev: true
 
+  /@unocss/config@0.60.2:
+    resolution: {integrity: sha512-EEgivE1xEnamAsYMcmjUmLJjOa9dBdV2zygT/blSFyX6rMfA4OuRlZ8hgfeWrHImZGiTXUU0jV2EaRmK9jEImQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.60.2
+      unconfig: 0.3.13
+    dev: true
+
   /@unocss/core@0.58.9:
     resolution: {integrity: sha512-wYpPIPPsOIbIoMIDuH8ihehJk5pAZmyFKXIYO/Kro98GEOFhz6lJoLsy6/PZuitlgp2/TSlubUuWGjHWvp5osw==}
     dev: true
 
   /@unocss/core@0.59.4:
     resolution: {integrity: sha512-bBZ1sgcAtezQVZ1BST9IS3jqcsTLyqKNjiIf7FTnX3DHpfpYuMDFzSOtmkZDzBleOLO/CtcRWjT0HwTSQAmV0A==}
+    dev: true
+
+  /@unocss/core@0.60.2:
+    resolution: {integrity: sha512-9i+eAJAqvy9bv0vrQxUU7VtR+wO6Vfk6dqrPHKRV/vlbwRT18v/C++dQ2L6PLM1CKxgNTeld0iTlpo8J3xZlxQ==}
     dev: true
 
   /@unocss/eslint-config@0.58.9(eslint@8.57.0)(typescript@5.4.5):
@@ -2314,6 +2329,21 @@ packages:
       '@unocss/config': 0.59.4
       '@unocss/core': 0.59.4
       '@unocss/rule-utils': 0.59.4
+      css-tree: 2.3.1
+      fast-glob: 3.3.2
+      magic-string: 0.30.10
+      postcss: 8.4.38
+    dev: true
+
+  /@unocss/postcss@0.60.2(postcss@8.4.38):
+    resolution: {integrity: sha512-fGXzhx5bh1iYxQ0wThmUsu+KMxCTqZsQQZ/a2kbTNzmOIslX1/cCWaQ62BWsfER7rOnZVG6DzGR+3CzVcDzuXg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      postcss: ^8.4.21
+    dependencies:
+      '@unocss/config': 0.60.2
+      '@unocss/core': 0.60.2
+      '@unocss/rule-utils': 0.60.2
       css-tree: 2.3.1
       fast-glob: 3.3.2
       magic-string: 0.30.10
@@ -2393,6 +2423,14 @@ packages:
       magic-string: 0.30.10
     dev: true
 
+  /@unocss/rule-utils@0.60.2:
+    resolution: {integrity: sha512-pg3XbU0s0TmmRk0UkSV6wTlca+Zz5xe9V+Mk8a5QqVp0oJ2jNWHO9AfzF4NcvTzM2zV2a/WbpjSBgoK8iAz3zg==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.60.2
+      magic-string: 0.30.10
+    dev: true
+
   /@unocss/scope@0.59.4:
     resolution: {integrity: sha512-wBQJ39kw4Tfj4km7AoGvSIobPKVnRZVsgc0bema5Y0PL3g1NeVQ/LopBI2zEJWdpxGXUWxSDsXm7BZo6qVlD/A==}
     dev: true
@@ -2449,7 +2487,7 @@ packages:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       magic-string: 0.30.10
-      vite: 5.2.9(sass@1.74.1)
+      vite: 5.2.9(sass@1.32.13)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2788,7 +2826,7 @@ packages:
       postcss: 8.4.38
       postcss-loader: 6.2.1(postcss@8.4.38)(webpack@5.91.0)
       progress-webpack-plugin: 1.0.16(webpack@5.91.0)
-      sass-loader: 14.1.1(sass@1.74.1)(webpack@5.91.0)
+      sass-loader: 14.1.1(sass@1.32.13)(webpack@5.91.0)
       ssri: 8.0.1
       terser-webpack-plugin: 5.3.10(webpack@5.91.0)
       thread-loader: 3.0.4(webpack@5.91.0)
@@ -5367,10 +5405,6 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@4.3.5:
-    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
-    dev: true
-
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -7191,7 +7225,7 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass-loader@14.1.1(sass@1.74.1)(webpack@5.91.0):
+  /sass-loader@14.1.1(sass@1.32.13)(webpack@5.91.0):
     resolution: {integrity: sha512-QX8AasDg75monlybel38BZ49JP5Z+uSKfKwF2rO7S74BywaRmGQMUBw9dtkS+ekyM/QnP+NOrRYq8ABMZ9G8jw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
@@ -7213,18 +7247,16 @@ packages:
         optional: true
     dependencies:
       neo-async: 2.6.2
-      sass: 1.74.1
+      sass: 1.32.13
       webpack: 5.91.0
     dev: true
 
-  /sass@1.74.1:
-    resolution: {integrity: sha512-w0Z9p/rWZWelb88ISOLyvqTWGmtmu2QJICqDBGyNnfG4OUnPX9BBjjYIXUpXCMOOg5MQWNpqzt876la1fsTvUA==}
-    engines: {node: '>=14.0.0'}
+  /sass@1.32.13:
+    resolution: {integrity: sha512-dEgI9nShraqP7cXQH+lEXVf73WOPCse0QlFzSD8k+1TcOxCMwVXfQlr0jtoluZysQOyJGnfr21dLvYKDJq8HkA==}
+    engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
       chokidar: 3.6.0
-      immutable: 4.3.5
-      source-map-js: 1.2.0
     dev: true
 
   /schema-utils@2.7.1:
@@ -7947,7 +7979,7 @@ packages:
       '@unocss/transformer-variant-group': 0.59.4
       '@unocss/vite': 0.59.4(vite@5.2.9)
       '@unocss/webpack': 0.59.4(webpack@5.91.0)
-      vite: 5.2.9(sass@1.74.1)
+      vite: 5.2.9(sass@1.32.13)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -8101,7 +8133,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite@5.2.9(sass@1.74.1):
+  /vite@5.2.9(sass@1.32.13):
     resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8132,7 +8164,7 @@ packages:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.3
-      sass: 1.74.1
+      sass: 1.32.13
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
