@@ -24,5 +24,6 @@
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src",
     "~": "${workspaceRoot}/*"
-  }
+  },
+  "css.customData": [".vscode/unocss.json"]
 }
