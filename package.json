@@ -23,6 +23,7 @@
     "@babel/eslint-parser": "^7.24.1",
     "@unocss/eslint-config": "^0.58.9",
     "@unocss/postcss": "^0.60.2",
+    "@unocss/transformer-variant-group": "^0.60.2",
     "@unocss/webpack": "^0.59.4",
     "@vue/cli-plugin-babel": "5.0.8",
     "@vue/cli-plugin-eslint": "5.0.8",

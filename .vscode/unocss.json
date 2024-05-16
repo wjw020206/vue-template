@@ -3,6 +3,9 @@
   "atDirectives": [
     {
       "name": "@apply"
+    },
+    {
+      "name": "@unocss"
     }
   ]
 }

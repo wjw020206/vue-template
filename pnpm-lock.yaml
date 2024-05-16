@@ -34,6 +34,9 @@ devDependencies:
   '@unocss/postcss':
     specifier: ^0.60.2
     version: 0.60.2(postcss@8.4.38)
+  '@unocss/transformer-variant-group':
+    specifier: ^0.60.2
+    version: 0.60.2
   '@unocss/webpack':
     specifier: ^0.59.4
     version: 0.59.4(webpack@5.91.0)
@@ -2470,6 +2473,12 @@ packages:
     resolution: {integrity: sha512-9XLixxn1NRgP62Kj4R/NC/rpqhql5F2s6ulJ8CAMTEbd/NylVhEANluPGDVUGcLJ4cj6E02hFa8C1PLGSm7/xw==}
     dependencies:
       '@unocss/core': 0.59.4
+    dev: true
+
+  /@unocss/transformer-variant-group@0.60.2:
+    resolution: {integrity: sha512-2eE2MZhFhNj+3fxO9VE1yC8LddUn9vetNZKrgGlegrBH/jOL9Pn/vygBmMAg1XFLEgC3DtvwdzCKMVttV30Ivw==}
+    dependencies:
+      '@unocss/core': 0.60.2
     dev: true
 
   /@unocss/vite@0.59.4(vite@5.2.9):
