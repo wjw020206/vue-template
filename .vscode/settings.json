@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "antfu",
     "astro",
     "Attributify",
     "autofetch",
@@ -28,6 +29,5 @@
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src",
     "~": "${workspaceRoot}/*"
-  },
-  "css.customData": [".vscode/unocss.json"]
+  }
 }

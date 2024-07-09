@@ -5,8 +5,8 @@ const instance = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
   timeout: 5000,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 });
 
 // 请求拦截器
@@ -16,7 +16,7 @@ instance.interceptors.request.use(
   },
   error => {
     return Promise.reject(error);
-  }
+  },
 );
 
 // 响应拦截器
@@ -26,7 +26,7 @@ instance.interceptors.response.use(
   },
   error => {
     return Promise.reject(error);
-  }
+  },
 );
 
 export default instance;

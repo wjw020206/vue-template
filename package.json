@@ -2,9 +2,14 @@
   "name": "vue-admin-template",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "dev": "vue-cli-service serve --mode development",
     "dev:prod": "vue-cli-service serve --mode production",
     "format": "prettier --write .",
@@ -12,19 +17,15 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "axios": "^1.6.8",
-    "core-js": "^3.36.1",
+    "axios": "^1.7.2",
+    "core-js": "^3.37.1",
     "pinia": "^2.1.7",
     "vue": "2.7.16",
     "vue-router": "3.6.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
-    "@babel/eslint-parser": "^7.24.1",
-    "@unocss/eslint-config": "^0.58.9",
-    "@unocss/postcss": "^0.60.2",
-    "@unocss/transformer-variant-group": "^0.60.2",
-    "@unocss/webpack": "^0.59.4",
+    "@babel/core": "^7.24.7",
+    "@babel/eslint-parser": "^7.24.7",
     "@vue/cli-plugin-babel": "5.0.8",
     "@vue/cli-plugin-eslint": "5.0.8",
     "@vue/cli-plugin-router": "5.0.8",
@@ -32,19 +33,15 @@
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.24.1",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
     "sass": "1.32.13",
-    "sass-loader": "^14.1.1",
-    "unocss": "^0.59.4",
-    "unplugin-auto-import": "^0.17.5",
-    "unplugin-icons": "^0.17.0",
-    "unplugin-vue-components": "^0.26.0",
+    "sass-loader": "^14.2.1",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-icons": "^0.19.0",
+    "unplugin-vue-components": "^0.27.2",
     "vue-cli-plugin-pinia": "~0.2.4",
     "vue-template-compiler": "^2.7.16"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [

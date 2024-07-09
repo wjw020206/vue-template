@@ -3,20 +3,25 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:vue/essential',
     'eslint:recommended',
     './.eslintrc-auto-import.json',
-    '@unocss'
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser'
+    parser: '@babel/eslint-parser',
   },
   rules: {
     'vue/multi-word-component-names': 'off',
-    'no-unused-vars': 'off',
-    'vue/require-v-for-key': 'off'
-  }
+    'no-unused-vars': [
+      2,
+      {
+        vars: 'all',
+        args: 'none',
+      },
+    ],
+    'vue/no-v-html': 'off',
+  },
 };
