@@ -3,7 +3,6 @@
     "formulahendry.auto-complete-tag",
     "streetsidesoftware.code-spell-checker",
     "naumovs.color-highlight",
-    "pranaygp.vscode-css-peek",
     "mikestead.dotenv",
     "editorconfig.editorconfig",
     "usernamehw.errorlens",
@@ -17,9 +16,13 @@
     "sdras.vue-vscode-snippets",
     "antfu.iconify",
     "antfu.goto-alias",
-    "antfu.unocss",
     "meganrogge.template-string-converter",
     "ipatalas.vscode-postfix-ts",
+    "donjayamanne.githistory",
+    "wix.vscode-import-cost",
+    "xabikos.javascriptsnippets",
+    "pkief.material-icon-theme",
+    "yoavbls.pretty-ts-errors",
     "vue.volar"
   ]
 }
