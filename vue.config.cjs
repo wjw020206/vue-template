@@ -17,8 +17,8 @@ const { VUE_APP_TITLE, VUE_APP_BASE_API, VUE_APP_API_URL, BASE_URL } =
 module.exports = defineConfig({
   publicPath: BASE_URL,
   // 配置 public/index.html 的标题
-  chainWebpack: config => {
-    config.plugin('html').tap(args => {
+  chainWebpack: (config) => {
+    config.plugin('html').tap((args) => {
       args[0].title = VUE_APP_TITLE;
       return args;
     });
