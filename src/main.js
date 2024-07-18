@@ -1,13 +1,16 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import pinia from './store';
+import setupPinia from './store';
 import './plugins/assets';
+import ElementUI from 'element-ui';
 
 Vue.config.productionTip = false;
 
+Vue.use(ElementUI);
+
 new Vue({
+  store: setupPinia(router),
   router,
-  pinia,
   render: (h) => h(App),
 }).$mount('#app');
