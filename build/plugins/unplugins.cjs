@@ -15,7 +15,11 @@ module.exports = function unplugin() {
           names: ['RouterLink', 'RouterView'],
         },
       ],
-      resolvers: [require('unplugin-icons/resolver').default({})],
+      resolvers: [
+        require('unplugin-icons/resolver').default({
+          prefix: 'icon',
+        }),
+      ],
     }),
     require('unplugin-icons/webpack').default({
       compiler: 'vue2',
