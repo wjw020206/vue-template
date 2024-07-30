@@ -1,3 +1,5 @@
+const { FileSystemIconLoader } = require('unplugin-icons/loaders');
+
 module.exports = function unplugin() {
   return [
     require('unplugin-auto-import/webpack').default({
@@ -18,6 +20,7 @@ module.exports = function unplugin() {
       resolvers: [
         require('unplugin-icons/resolver').default({
           prefix: 'icon',
+          customCollections: ['custom'],
         }),
       ],
     }),
@@ -26,6 +29,11 @@ module.exports = function unplugin() {
       scale: 1,
       defaultClass: 'inline-block',
       autoInstall: true,
+      customCollections: {
+        custom: FileSystemIconLoader('src/icons/svg', (svg) =>
+          svg.replace(/^<svg /, '<svg fill="currentColor" '),
+        ),
+      },
     }),
   ];
 };
