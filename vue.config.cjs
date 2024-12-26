@@ -22,6 +22,13 @@ module.exports = defineConfig({
       args[0].title = VUE_APP_TITLE;
       return args;
     });
+
+    // 通过 terser-webpack-plugin 移除 console
+    config.optimization.minimizer('terser').tap((args) => {
+      args[0].terserOptions.compress.drop_console = true;
+      args[0].terserOptions.compress.drop_debugger = true;
+      return args;
+    });
   },
   configureWebpack: {
     plugins: [...setupPlugins()],
