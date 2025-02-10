@@ -15,7 +15,9 @@ import { useCounterStore } from '@/store/modules/counter';
 
 const counterStore = useCounterStore();
 
-const { count, addCount } = storeToRefs(counterStore);
+const { addCount } = counterStore;
+
+const { count } = storeToRefs(counterStore);
 
 const route = useRoute();
 
