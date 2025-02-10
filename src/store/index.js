@@ -5,14 +5,8 @@ import { useCounterStore } from './modules/counter';
 
 Vue.use(PiniaVuePlugin);
 
-export default function setupPinia(router) {
-  const pinia = createPinia();
+const pinia = createPinia();
 
-  useCounterStore(pinia);
+useCounterStore(pinia);
 
-  pinia.use(({ store }) => {
-    store.router = markRaw(router);
-  });
-
-  return pinia;
-}
+export default pinia;

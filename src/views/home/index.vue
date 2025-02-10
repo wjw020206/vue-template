@@ -10,19 +10,18 @@
 </template>
 
 <script setup>
-import useGetRouterInfo from '@/composables/router-info';
+import { useRoute } from 'vue-router/composables';
 import { useCounterStore } from '@/store/modules/counter';
 
 const counterStore = useCounterStore();
 
 const { count, addCount } = storeToRefs(counterStore);
 
-const { useRoute } = useGetRouterInfo();
+const route = useRoute();
 
 const pagePath = ref(null);
 
 const showCurrentPagePath = () => {
-  const route = useRoute();
   pagePath.value = route.path;
 };
 </script>
