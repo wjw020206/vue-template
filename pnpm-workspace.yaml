@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - core-js
+  - vue-demi
+  - yorkie
